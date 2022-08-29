@@ -81,7 +81,7 @@ class CreateNotesFragment : Fragment() {
 
         Toast.makeText(requireContext(), "Lưu thành công", Toast.LENGTH_SHORT).show()
 
-        Navigation.findNavController(it!!).navigate(R.id.action_homeFragment_to_createNotesFragment)
+        Navigation.findNavController(it!!).navigate(R.id.action_createNotesFragment_to_homeFragment)
     }
 
 }

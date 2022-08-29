@@ -10,14 +10,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <SearchView
+            android:id="@+id/searchNotes"
+            android:layout_width="match_parent"
+            android:background="@drawable/custom_search"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:queryHint="Enter Notes Here...."
+            android:iconifiedByDefault="false"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            tools:ignore="MissingConstraints" />
+
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchNotes"
             tools:ignore="MissingConstraints">
+
 
 
             <TextView
@@ -26,12 +39,11 @@
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_all"
                 android:gravity="center"
-                android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:paddingTop="5dp"
                 android:background="@drawable/medium_background"
                 android:paddingBottom="5dp"
-                android:layout_marginStart="14dp"
+                android:layout_marginStart="10dp"
                 android:layout_gravity="center"
                 android:paddingLeft="5dp"
                 android:paddingRight="10dp"/>
@@ -85,8 +97,6 @@
                 android:textStyle="bold"
                 android:textColor="#66BB6A"/>
 
-
-
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -106,6 +116,7 @@
             android:layout_marginRight="20dp"
             tools:ignore="MissingConstraints"
             android:id="@+id/btnAddNotes"/>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

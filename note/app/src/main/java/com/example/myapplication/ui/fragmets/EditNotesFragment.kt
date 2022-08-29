@@ -95,7 +95,7 @@ class EditNotesFragment : Fragment() {
 
         binding.btnDeleteNotes.setOnClickListener {
 
-//            delete()
+            delete()
         }
 
 
@@ -125,24 +125,24 @@ class EditNotesFragment : Fragment() {
     }
 
 
-//    private fun delete(){
-//        val bottomSheetDialog: BottomSheetDialog = BottomSheetDialog(requireContext())
-//        bottomSheetDialog.setContentView(R.layout.dialog_delete)
-//        val textviewYes= bottomSheetDialog.findViewById<TextView>(R.id.btnYes)
-//        val textviewNo= bottomSheetDialog.findViewById<TextView>(R.id.btnNo)
-//
-//        textviewYes?.setOnClickListener {
-//
-//            viewModel.deleteNotes(updateNotes.data.id!!)
-//            bottomSheetDialog.dismiss()
-//        }
-//
-//        textviewNo?.setOnClickListener {
-//            bottomSheetDialog.dismiss()
-//        }
-//
-//        bottomSheetDialog.show()
-//    }
+    private fun delete(){
+        val bottomSheetDialog: BottomSheetDialog = BottomSheetDialog(requireContext())
+        bottomSheetDialog.setContentView(R.layout.dialog_delete)
+        val textviewYes= bottomSheetDialog.findViewById<TextView>(R.id.btnYes)
+        val textviewNo= bottomSheetDialog.findViewById<TextView>(R.id.btnNo)
+
+        textviewYes?.setOnClickListener {
+
+            viewModel.deleteNotes(updateNotes.data.id!!)
+            bottomSheetDialog.dismiss()
+        }
+
+        textviewNo?.setOnClickListener {
+            bottomSheetDialog.dismiss()
+        }
+
+        bottomSheetDialog.show()
+    }
 
 
 
