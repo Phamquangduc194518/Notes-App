@@ -11,8 +11,14 @@ import com.example.myapplication.model.Notes
 import com.example.myapplication.ui.fragmets.HomeFragmentDirections
 
 
-class NotesAdapter(requireContext: Context, val notesList: List<Notes>) :
+class NotesAdapter(requireContext: Context, var notesList: List<Notes>) :
     RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
+
+    fun filtering(newFilter: ArrayList<Notes>) {
+        notesList = newFilter
+        notifyDataSetChanged()
+    }
+
     class NotesViewHolder(val binding: ItemNotesBinding) : RecyclerView.ViewHolder(binding.root) {
 
     }
